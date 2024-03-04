@@ -28,8 +28,8 @@ ifndef::env-github[]
 image:{includedir}/img/logo_kt_sz_rgb.jpg[]
 endif::[]
 
-= Sondernutzungsplanung kommunal V1
-[.subtitle]#A202 Modelldokumentation# +
+= <Title der Modelldokumentation>
+[.subtitle]#<Untertitel der Modelldokumentation># +
 
 // Die Verwiese auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
 ifndef::env-github[]
