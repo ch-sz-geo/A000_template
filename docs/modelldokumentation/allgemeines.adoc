@@ -16,14 +16,9 @@ Ausarbeitung eines Geodatenmodells zuständig sind.
 ===  Zweck des Dokuments
 Dieses Dokument beschreibt den Geobasisdatensatz
  
-* Sondernutzungsplanung kommunal. +
+* __<Name des Datensatzes>__. +
 
-Dieser Geobasisdatensatz wurde bis zur ÖREB-Version 2 über das Datenmodell der kommunalen
-Nutzungsplanung geführt. Aufgrund der Tatsache, dass die Ausscheidung von rechtskräftigen
-Sondernutzungsplänen (nachfolgend Gestaltungsplan) über ein von der Nutzungsplanung
-abweichendes, unabhängiges Verfahren erfolgt, wurde dieses Thema aus der kommunalen
-Nutzungsplanung ausgelagert und über ein eigenes Datenmodell beschrieben. Diese Entkoppelung
-von der Nutzungsplanung erleichtert die Nachführung der Gestaltungspläne. +
+__<weitere Beschreibungen>__ +
 
 Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters. +
 
