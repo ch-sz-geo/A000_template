@@ -28,7 +28,7 @@ h| Version h| Datum h| Koreferent h| Prüfstelle
 |=======
 ====
 
-.Referenzierte Dokumente
+.referenzierte Dokumente
 [%collapsible]
 ====
 [cols="10%, 70%, 10%, 10%"]
