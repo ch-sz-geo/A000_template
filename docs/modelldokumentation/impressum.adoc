@@ -24,7 +24,7 @@ Person 2 (Kürzel 2), Amt 2
 [cols="10%, 10%, 10%, 70%"]
 |=======
 h| Version h| Datum h| Koreferent h| Prüfstelle
-| 1.0 | 01.01.2001 | xy | Amt A
+| 1.0 | 2001-01-01 | xy | Amt A
 |=======
 ====
 
@@ -34,8 +34,8 @@ h| Version h| Datum h| Koreferent h| Prüfstelle
 [cols="10%, 70%, 10%, 10%"]
 |=======
 h| Nr. h| Titel h| Autor(en) h| Version
-| [01] | Kantonales Geoinformationsgesetz (KGeoiG) (SRSZ 214.110) | Kt. SZ | 24.06.2010
-| [02] | Verordnung zum kantonalen Geoinformationsgesetz (KGeoiV) (SRSZ 214.111) | Kt. SZ | 18.12.2012
+| [01] | kantonales Geoinformationsgesetz (kGeoiG) (SRSZ 214.110) | Kt. SZ | 24.06.2010
+| [02] | Verordnung zum kantonalen Geoinformationsgesetz (kGeoiV) (SRSZ 214.111) | Kt. SZ | 18.12.2012
 |=======
 ====
 
