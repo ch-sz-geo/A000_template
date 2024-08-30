@@ -30,8 +30,11 @@ m| Bemerkung
 | Erläuterung, welche den Katalogeintrag näher beschreibt
 | Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
 | öffentlich
+m| Bemerkung_intern
+| Erläuterung, welche den Katalogeintrag näher beschreibt
+| Dieser Status wird für alle Objekte verwendet, bei denen aktuell eine Nachführung läuft.
+| +++<span style="color:red;">amtsintern</span>+++
 |===
-
 
 [%header, cols="10%, 10%, 10%, 60%, 10%", format=csv, separator=;]
 |=======
