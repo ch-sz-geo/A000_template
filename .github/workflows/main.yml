@@ -33,12 +33,25 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
-        with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Install Ruby
+        run: |
+          # Stelle sicher, dass ruby-build installiert ist
+          if ! command -v ruby-build &> /dev/null; then
+            git clone https://github.com/rbenv/ruby-build.git
+            sudo ./ruby-build/install.sh
+          fi
+
+          # Installiere Ruby in den Tool-Cache
+          ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+
+          # Markiere die Installation als abgeschlossen
+          touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+      - name: Ensure Ruby installation is not parallelized
+        run: |
+          mkdir -p /tmp/ruby-install-lock
+          flock /tmp/ruby-install-lock ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+      - name: Check Ruby Version
+        run: ruby --version
       - name: install Gem
         run: gem install asciidoctor
       - name: create file
