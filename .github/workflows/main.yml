@@ -42,10 +42,10 @@ jobs:
          # cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Check Ruby version
         run: ruby --version
-      - name: Install Gem locally
-        run: gem install asciidoctor --user-install
-      - name: Add Gem path to PATH
-        run: echo "::add-path::$(ruby -e 'puts Gem.user_dir')/bin"
+      - name: Install Bundler
+        run: gem install bundler --user-install
+      - name: Install Gems with Bundler
+        run: bundle install --path vendor/bundle
       - name: create file
         run: |
           asciidoctor -o ./docs/modelldokumentation.html ./docs/modelldokumentation/modelldokumentation.adoc
