@@ -51,7 +51,7 @@ jobs:
       - name: Install Gems with Bundler
         run: bundle install --path vendor/bundle
       - name: Verify Installation
-        run: asciidoctor --version       
+        run: bundle exec asciidoctor --version
       - name: create file
         run: |
           asciidoctor -o ./docs/modelldokumentation.html ./docs/modelldokumentation/modelldokumentation.adoc
