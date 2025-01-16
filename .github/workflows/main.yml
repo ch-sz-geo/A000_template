@@ -37,7 +37,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: latest # Stelle sicher, dass die Version kompatibel ist
+          ruby-version: 3.2 # Stelle sicher, dass die Version kompatibel ist
       - name: Install Bundler
         run: gem install bundler
       - name: Add Ruby bin to PATH
