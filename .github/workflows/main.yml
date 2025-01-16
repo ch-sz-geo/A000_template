@@ -54,8 +54,8 @@ jobs:
         run: bundle exec asciidoctor --version
       - name: create file
         run: |
-          asciidoctor -o ./docs/modelldokumentation.html ./docs/modelldokumentation/modelldokumentation.adoc
-          asciidoctor -o ./docs/erfassungsrichtlinien.html ./docs/erfassungsrichtlinien/erfassungsrichtlinien.adoc
+          bundle exec asciidoctor -o ./docs/modelldokumentation.html ./docs/modelldokumentation/modelldokumentation.adoc
+          bundle exec asciidoctor -o ./docs/erfassungsrichtlinien.html ./docs/erfassungsrichtlinien/erfassungsrichtlinien.adoc
       - name: install Asciidoc Pdf
         run: gem install asciidoctor-pdf
       - name: create pdfs
