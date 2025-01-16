@@ -38,12 +38,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.2 # Stelle sicher, dass die Version kompatibel ist
-      - name: Install Bundler
-        run: gem install bundler
-      - name: Add Ruby bin to PATH
-        run: echo "$(ruby -e 'puts Gem.user_dir')/bin" >> $GITHUB_PATH
-      - name: Install Gems with Bundler
-        run: bundle install --path vendor/bundle
+          bundler-cache: true # Automatisch 'bundle install' ausführen und Gems cachen
       - name: Verify Installation
         run: bundle exec asciidoctor --version
       - name: create file
