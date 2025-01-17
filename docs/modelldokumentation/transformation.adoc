@@ -1,7 +1,8 @@
 == Modelltransformationen
 === Transformation ins minimale Geodatenmodell des Bundes
 * Quellmodell: Das hier beschriebene Datenmodell
-* Zielmodell: http://models.geo.admin.ch/BAFU/Waldgrenzen_V1_2.ili[Waldgrenzen_V1_2] (Version: 2023-03-20)
+* Zielmodell: http://models.geo.admin.ch/BAFU/todo[<Modellname>] (Version: 2023-03-20)
+
 
 === Transformation ins Transfermodell ÖREB-Kataster
 * Quellmodell: Das hier beschriebene Datenmodell
@@ -11,9 +12,7 @@
 [cols=2*,options="header"]
 |===
 | Quellattribut | Zielattribut
-| todo: kontrollieren
-
-`+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
+| `+ch.sz.a094b.oereb.wald.statische_waldgrenze.linie+`
 | `+VerweisWMS+`
 |===
 
@@ -68,7 +67,6 @@ m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
 |===
 
 
-
 [cols="e,m,^,>s",width="25%"]
 |===
 |1 >s|2 |3 |4
@@ -76,7 +74,6 @@ m| https://data.geo.sz.ch/public/Themen/A057b/[Legende.xml] m| ArtCodeliste
 ^|8
 |9 2+>|10
 |===
-
 
 
 ifdef::backend-pdf[]
