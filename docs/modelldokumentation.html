@@ -234,6 +234,13 @@ th {
 <li><a href="#_klasse_legendeeintrag">5.3.4. Klasse <code>LegendeEintrag</code></a></li>
 </ul>
 </li>
+<li><a href="#_transformation_ins_webgis">5.4. Transformation ins WebGIS</a>
+<ul class="sectlevel3">
+<li><a href="#_allgemeines_2">5.4.1. Allgemeines</a></li>
+<li><a href="#_tabelle_der_waldgrenze">5.4.2. Tabelle der <code>Waldgrenze</code></a></li>
+<li><a href="#_tabelle_der_stockgrenze">5.4.3. Tabelle der <code>Stockgrenze</code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -288,7 +295,7 @@ th {
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">letzte Änderung</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2025-02-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-02-21</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Themen-Nummer</p></td>
@@ -1214,6 +1221,128 @@ Zudem muss der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transformation_ins_webgis"><a class="anchor" href="#_transformation_ins_webgis"></a><a class="link" href="#_transformation_ins_webgis">5.4. Transformation ins WebGIS</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Quellmodell: Das hier beschriebene Datenmodell</p>
+</li>
+<li>
+<p>Zielmodell: keines (siehe unten)</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_allgemeines_2"><a class="anchor" href="#_allgemeines_2"></a><a class="link" href="#_allgemeines_2">5.4.1. Allgemeines</a></h4>
+<div class="paragraph">
+<p>Für die WebGIS-Publikation werden die Daten optimiert. Dies ist häufig mit einer Denormalisierung verbunden ("flachwalzen" der Daten). Der Attributumfang richtet sich nach den Anforderungen der zuständigen Stelle und ist im Normalfall geringer als im Ausgangsmodell. Eine weitere Besonderheit kommt den Tabellen der WebGIS-Datenbank zu. Sie weisen Standard-Spalten auf, welche nicht Teil des Datenmodells sind. Es handelt sich um folgende Spalten:</p>
+</div>
+<div class="paragraph">
+<p><strong>Standardspalten:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Spaltenname</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eindeutige Identifikation des Objektes; kann von der OID der Ausgangsdaten abweichen, falls Objekte zum Zweck der Publikation aufgeteilt werden müssen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>etl_dt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zeitstempel, an dem der Datensatz in die Tabelle geschrieben wurde (etl: extract - transfer - load)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>etl_job</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name des Jobs, mit dem die Daten auf die Tabelle geschrieben wurde</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>asof_dt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datum, an dem am Datensatz die letzten Änderungen vorgenommen wurden. Dieser Wert wird in den Metadaten des Datensatzes nachgeführt.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Das WebGIS bezieht die Daten direkt aus der Datenbank. Aus diesem Grund wird nachfolgend von "Tabelle" und "Spalte" anstelle von "Klasse" und "Attribut" gesprochen. Der Klassenname erscheint lediglich in der Überschrift.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tabelle_der_waldgrenze"><a class="anchor" href="#_tabelle_der_waldgrenze"></a><a class="link" href="#_tabelle_der_waldgrenze">5.4.2. Tabelle der <code>Waldgrenze</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielspalte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Standardspalten gemäss den Angaben oben)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Typ.Code</code><br>
+hergeleitet über <code>Waldgrenze.rTyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>typ</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Typ.Name</code><br>
+hergeleitet über <code>Waldgrenze.rTyp</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bezeichnung</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Waldgrenze.Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geom</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_tabelle_der_stockgrenze"><a class="anchor" href="#_tabelle_der_stockgrenze"></a><a class="link" href="#_tabelle_der_stockgrenze">5.4.3. Tabelle der <code>Stockgrenze</code></a></h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Quellattribut</th>
+<th class="tableblock halign-left valign-top">Zielspalte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- - -</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Standardspalten gemäss den Angaben oben)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Verfahren.Verfuegungsnummer</code><br>
+hergeleitet über:<br>
+<code>Stockgrenze.rWaldgrenze</code> &#x2192;<br>
+<code>Waldgrenze.Begruendungsverfahren</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>verfuegung_datum_nr</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Stockgrenze.Geometrie</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>geom</code></p></td>
+</tr>
+</tbody>
+</table>
 <table class="tableblock frame-all grid-all" style="width: 25%;">
 <colgroup>
 <col style="width: 25%;">
@@ -1249,7 +1378,7 @@ Zudem muss der Code des Waldfeststellungstatus <code>Verfahrensstatus.Code</code
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-02-11 13:59:54 UTC
+Last updated 2025-02-21 08:24:35 UTC
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
