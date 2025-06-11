@@ -7,7 +7,7 @@ Die Stammdaten werden durch die zuständige Stelle vorgegeben. Bei Bundesthemen 
 Die Stammdaten werden durch die Abteilung Geoinformation nachgeführt und im https://github.com/ch-sz-geo/A000_template/tree/main/data[data-Verzeichnis] des jeweiligen Themas veröffentlicht.
 
 ==== Klasse `+Katalogeintrag+`
-Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte +Katalogeintrag+, sondern nur Objekte von den spezialisierten Klassen.
+Die Klasse `+Katalogeintrag+` enthält die allgemeinen, für alle Kataloge gemeinsamen Attribute. Die Klasse selber ist abstrakt: Es gibt keine Objekte `+Katalogeintrag+`, sondern nur Objekte von den spezialisierten Klassen.
 
 Spaltenbreite Variante 1:
 [cols="10%, 60%, 20%, 10%",options="header"]
