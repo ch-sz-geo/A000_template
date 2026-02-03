@@ -30,7 +30,7 @@ ifndef::env-github[:toc: left]
 ifndef::env-github,backend-pdf[]
 :myImage: https://ch-sz-geo.github.io/A000_defaultDesigne/themes/logo_kt_sz_rgb.jpg
 [.img-logo]
-image::{myImage}[]
+image:{myImage}[logo kt sz rgb]
 
 = {title}
 [.subtitle]#{subtitle}# +
