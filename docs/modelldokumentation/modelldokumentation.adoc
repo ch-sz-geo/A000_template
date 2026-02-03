@@ -42,7 +42,7 @@ image:{myImage}[logo kt sz rgb]
 //* https://amandawetter.github.io/A000_Rebuild/docs/modelldokumentation.pdf[Dokumentation als PDF] +
 
 //****
-*/
+*//
 endif::[]
 
 // Die Verwiese auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
