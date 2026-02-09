@@ -43,10 +43,12 @@ jobs:
                 sed -i "s/\\<$safe_key\\>/$value/g" README.adoc 
                 sed -i "s/\\<$safe_key\\>/$value/g" index.html
                 sed -i "s/\\<$safe_key\\>/$value/g" docs/modelldokumentation/modelldokumentation.adoc
+                sed -i "s/\\<$safe_key\\>/$value/g" docs/modelldokumentation/allgemeines.adoc
               else
                 sed -i "s/$key/$value/g" README.adoc 
                 sed -i "s/$key/$value/g" index.html
                 sed -i "s/$key/$value/g" docs/modelldokumentation/modelldokumentation.adoc
+                sed -i "s/\\<$safe_key\\>/$value/g" docs/modelldokumentation/allgemeines.adoc
               fi
             done
             for key in "${key_array[@]}"; do
