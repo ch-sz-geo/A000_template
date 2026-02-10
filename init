@@ -1,2 +1,2 @@
-(AXXX, <Themennummer>, A???, Themennummer, <Themen-Nummer>): <Hier_Themennummer_eingeben>
-(<Themenname_hier_eintragen>, <Themenname>, Themenname, <Name des Datensatzes>): <Hier_Themenname_eingeben>
+(AXXX,<Hier_Themennummer_eingeben>,<Hier_Themennummer_eingeben>, Themennummer, <<Hier_Themennummer_eingeben>>): <Hier_Themennummer_eingeben>
+(<Hier_Themenname_eingeben>,<Hier_Themenname_eingeben>, Themenname, <<Hier_Themenname_eingeben>>): <Hier_Themenname_eingeben>
