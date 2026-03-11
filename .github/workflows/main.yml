@@ -21,7 +21,7 @@ on:
 
   # Triggers when an A000_defaultDesign design_update is run
   repository_dispatch:
-    types: [run-external-workflow]
+    types: [update-design]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
