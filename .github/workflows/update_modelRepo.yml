@@ -104,7 +104,7 @@ jobs:
             -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GH_TOKEN" \
-            https://api.github.com/repos/ch-sz-geo/models/dispatches \  
+            https://api.github.com/repos/ch-sz-geo/models/dispatches \
             -d "$payload")
             
           #This section is to fail the task when the dispach to the target repo didn't work
