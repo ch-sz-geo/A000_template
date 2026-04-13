@@ -30,7 +30,7 @@ jobs:
           path: ../ili2c
       - name: verify java Version
         run: java --version
-      - name:
+      - name: Validate the Interlis Models
         run: |
           for file in models/*; do
             java -jar ../ili2c/ili2c.jar "$file"
