@@ -1,8 +1,8 @@
 == Diagramme
-=== Komponentendiagramm
+=== [todo] Komponentendiagramm
 image::../img/Komponentendiagramm.jpg[]
 
-=== Klassendiagramm
+=== [todo] Klassendiagramm
 image::../img/Klassendiagramm.jpg[]
 
 image::../img/Legende Klassendiagramm Variante 1.jpg[width=350]
