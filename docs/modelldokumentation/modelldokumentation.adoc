@@ -1,4 +1,3 @@
-// Hier den Titel eingeben
 :title: <Themenname> (<Themennummer>)
 :subtitle: Modelldokumentation
 ifdef::backend-pdf[]
@@ -34,14 +33,6 @@ image:{myImage}[logo kt sz rgb]
 
 = {title}
 [.subtitle]#{subtitle}# +
-
-//****
-
-//* https://ch-sz-geo.github.io/A000_entrypage/[zur Startseite] +
-//* https://amandawetter.github.io/A000_Rebuild/[Übersicht <Themennummer> Dokumentation] +
-//* https://amandawetter.github.io/A000_Rebuild/docs/modelldokumentation.pdf[Dokumentation als PDF] +
-
-//****
 
 endif::[]
 
